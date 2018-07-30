@@ -27,7 +27,7 @@
 %if 0%{?released_kernel}
 
 # Do we have a -stable update to apply?
-%define stable_update 10
+%define stable_update 11
 # Set rpm version accordingly
 %if 0%{?stable_update}
 %define stablerev %{stable_update}
@@ -174,6 +174,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Mon Jul 30 2018 Justin M. Forbes <jforbes@fedoraproject.org> - 4.17.11-1
+- Linux v4.17.11
+
 * Fri Jul 27 2018 Justin M. Forbes <jforbes@fedoraproject.org> - 4.17.10-1
 - Initial package commit
 
