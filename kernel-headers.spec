@@ -27,7 +27,7 @@
 %if 0%{?released_kernel}
 
 # Do we have a -stable update to apply?
-%define stable_update 1
+%define stable_update 3
 # Set rpm version accordingly
 %if 0%{?stable_update}
 %define stablerev %{stable_update}
@@ -174,7 +174,10 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
-* Fri Aug 17 2018 Justin M. Forbes <jforbes@fedoraproject.org> - 4.18.2-1
+* Mon Aug 20 2018 Justin M. Forbes <jforbes@fedoraproject.org> - 4.18.3-1
+- Linux v4.18.3
+
+* Fri Aug 17 2018 Justin M. Forbes <jforbes@fedoraproject.org> - 4.18.1-1
 - Linux v4.18.1
 
 * Mon Aug 13 2018 Justin M. Forbes <jforbes@fedoraproject.org> - 4.18.0-1
