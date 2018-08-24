@@ -27,7 +27,7 @@
 %if 0%{?released_kernel}
 
 # Do we have a -stable update to apply?
-%define stable_update 17
+%define stable_update 19
 # Set rpm version accordingly
 %if 0%{?stable_update}
 %define stablerev %{stable_update}
@@ -174,6 +174,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Fri Aug 24 2018 Justin M. Forbes <jforbes@fedoraproject.org> - 4.17.19-1
+- Linux v4.17.19
+
 * Mon Aug 20 2018 Justin M. Forbes <jforbes@fedoraproject.org> - 4.17.17-1
 - Linux v4.17.17
 
