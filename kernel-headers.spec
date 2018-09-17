@@ -27,7 +27,7 @@
 %if 0%{?released_kernel}
 
 # Do we have a -stable update to apply?
-%define stable_update 7
+%define stable_update 8
 # Set rpm version accordingly
 %if 0%{?stable_update}
 %define stablerev %{stable_update}
@@ -174,6 +174,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Mon Sep 17 2018 Laura Abbott <labbott@redhat.com> - 4.18.8-100
+- Linux v4.18.8
+
 * Thu Sep 13 2018 Laura Abbott <labbott@redhat.com> - 4.18.7-100
 - Linux v4.18.7
 
