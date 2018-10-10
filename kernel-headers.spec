@@ -27,7 +27,7 @@
 %if 0%{?released_kernel}
 
 # Do we have a -stable update to apply?
-%define stable_update 12
+%define stable_update 13
 # Set rpm version accordingly
 %if 0%{?stable_update}
 %define stablerev %{stable_update}
@@ -174,6 +174,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Wed Oct 10 2018 Laura Abbott <labbott@redhat.com> - 4.18.13-100
+- Linux v4.18.13
+
 * Thu Oct 04 2018 Laura Abbott <labbott@redhat.com> - 4.18.12-100
 - Linux v4.18.12
 
