@@ -174,6 +174,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Wed Oct 10 2018 Laura Abbott <labbott@redhat.com> - 4.18.13-200
+- Linux v4.18.13
+
 * Thu Oct 04 2018 Laura Abbott <labbott@redhat.com> - 4.18.12-200
 - Linux v4.18.12
 
