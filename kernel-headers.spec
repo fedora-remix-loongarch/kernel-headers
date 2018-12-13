@@ -27,7 +27,7 @@
 %if 0%{?released_kernel}
 
 # Do we have a -stable update to apply?
-%define stable_update 8
+%define stable_update 9
 # Set rpm version accordingly
 %if 0%{?stable_update}
 %define stablerev %{stable_update}
@@ -174,6 +174,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Thu Dec 13 2018 Jeremy Cline <jcline@redhat.com> - 4.19.9-200
+- Linux v4.19.9
+
 * Mon Dec 10 2018 Jeremy Cline <jcline@redhat.com> - 4.19.8-200
 - Linux v4.19.8
 
