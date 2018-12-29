@@ -27,7 +27,7 @@
 %if 0%{?released_kernel}
 
 # Do we have a -stable update to apply?
-%define stable_update 12
+%define stable_update 13
 # Set rpm version accordingly
 %if 0%{?stable_update}
 %define stablerev %{stable_update}
@@ -174,6 +174,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Sat Dec 29 2018 Jeremy Cline <jcline@redhat.com> - 4.19.13-200
+- Linux v4.19.13
+
 * Fri Dec 28 2018 Jeremy Cline <jcline@redhat.com> - 4.19.12-200
 - Linux v4.19.12
 
