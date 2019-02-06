@@ -27,7 +27,7 @@
 %if 0%{?released_kernel}
 
 # Do we have a -stable update to apply?
-%define stable_update 6
+%define stable_update 7
 # Set rpm version accordingly
 %if 0%{?stable_update}
 %define stablerev %{stable_update}
@@ -174,6 +174,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Wed Feb 06 2019 Justin M. Forbes <jforbes@fedoraproject.org> - 4.20.7-200
+- Linux v4.20.7
+
 * Thu Jan 31 2019 Justin M. Forbes <jforbes@fedoraproject.org> - 4.20.6-200
 - Linux v4.20.6
 
