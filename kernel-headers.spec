@@ -27,7 +27,7 @@
 %if 0%{?released_kernel}
 
 # Do we have a -stable update to apply?
-%define stable_update 8
+%define stable_update 10
 # Set rpm version accordingly
 %if 0%{?stable_update}
 %define stablerev %{stable_update}
@@ -174,6 +174,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Fri Feb 15 2019 Justin M. Forbes <jforbes@fedoraproject.org> - 4.20.10-100
+- Linux v4.20.10
+
 * Tue Feb 12 2019 Justin M. Forbes <jforbes@fedoraproject.org> - 4.20.8-100
 - Linux v4.20.8
 
