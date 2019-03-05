@@ -1,7 +1,7 @@
 # For a stable, released kernel, released_kernel should be 1. For rawhide
 # and/or a kernel built from an rc or git snapshot, released_kernel should
 # be 0.
-%global released_kernel 1
+%global released_kernel 0
 
 # define buildid .local
 
@@ -40,9 +40,9 @@
 # The next upstream release sublevel (base_sublevel+1)
 %define upstream_sublevel %(echo $((%{base_sublevel} + 1)))
 # The rc snapshot level
-%global rcrev 8
+%global rcrev 0
 # The git snapshot level
-%define gitrev 0
+%define gitrev 1
 # Set rpm version accordingly
 %define rpmversion 5.%{upstream_sublevel}.0
 %endif
@@ -172,6 +172,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Tue Mar 05 2019 Jeremy Cline <jcline@redhat.com> - 5.1.0-0.rc0.git1.1
+- Linux v5.1-rc0.git1
+
 * Mon Mar 04 2019 Laura Abbott <labbott@redhat.com> - 5.0.0-1
 - Linux v5.0.0
 
