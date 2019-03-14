@@ -42,7 +42,7 @@
 # The rc snapshot level
 %global rcrev 0
 # The git snapshot level
-%define gitrev 7
+%define gitrev 8
 # Set rpm version accordingly
 %define rpmversion 5.%{upstream_sublevel}.0
 %endif
@@ -172,6 +172,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Thu Mar 14 2019 Jeremy Cline <jcline@redhat.com> - 5.1.0-0.rc0.git8.1
+- Linux v5.1-rc0.git8
+
 * Wed Mar 13 2019 Jeremy Cline <jcline@redhat.com> - 5.1.0-0.rc0.git7.1
 - Linux v5.1-rc0.git7
 
