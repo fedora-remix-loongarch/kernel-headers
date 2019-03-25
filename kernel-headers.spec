@@ -174,6 +174,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Mon Mar 25 2019 Laura Abbott <labbott@redhat.com> - 5.0.4-200
+- Linux v5.0.4
+
 * Tue Mar 19 2019 Laura Abbott <labbott@redhat.com> - 5.0.3-200
 - Linux v5.0.3
 
