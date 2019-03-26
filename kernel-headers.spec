@@ -33,7 +33,7 @@
 %define stablerev %{stable_update}
 %define stable_base %{stable_update}
 %endif
-%define rpmversion 4.%{base_sublevel}.%{stable_update}
+%define rpmversion 5.%{base_sublevel}.%{stable_update}
 
 ## The not-released-kernel case ##
 %else
@@ -44,7 +44,7 @@
 # The git snapshot level
 %define gitrev 0
 # Set rpm version accordingly
-%define rpmversion 4.%{upstream_sublevel}.0
+%define rpmversion 5.%{upstream_sublevel}.0
 %endif
 
 # pkg_release is what we'll fill in for the rpm Release: field
@@ -174,7 +174,7 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
-* Tue Mar 26 2019 Laura Abbott <labbott@redhat.com> - 4.0.4-100
+* Tue Mar 26 2019 Laura Abbott <labbott@redhat.com> - 5.0.4-100
 - Linux v5.0.4
 
 * Tue Mar 19 2019 Justin M. Forbes <jforbes@fedoraproject.org> - 4.20.17-100
