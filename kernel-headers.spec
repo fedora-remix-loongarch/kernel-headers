@@ -42,7 +42,7 @@
 # The rc snapshot level
 %global rcrev 4
 # The git snapshot level
-%define gitrev 3
+%define gitrev 4
 # Set rpm version accordingly
 %define rpmversion 5.%{upstream_sublevel}.0
 %endif
@@ -172,6 +172,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Fri Apr 12 2019 Jeremy Cline <jcline@redhat.com> - 5.1.0-0.rc4.git4.1
+- Linux v5.1-rc4.git4
+
 * Thu Apr 11 2019 Jeremy Cline <jcline@redhat.com> - 5.1.0-0.rc4.git3.1
 - Linux v5.1-rc4.git3
 
