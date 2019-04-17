@@ -42,7 +42,7 @@
 # The rc snapshot level
 %global rcrev 5
 # The git snapshot level
-%define gitrev 1
+%define gitrev 2
 # Set rpm version accordingly
 %define rpmversion 5.%{upstream_sublevel}.0
 %endif
@@ -172,6 +172,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Wed Apr 17 2019 Jeremy Cline <jcline@redhat.com> - 5.1.0-0.rc5.git2.1
+- Linux v5.1-rc5.git2
+
 * Tue Apr 16 2019 Jeremy Cline <jcline@redhat.com> - 5.1.0-0.rc5.git1.1
 - Linux v5.1-rc5.git1
 
