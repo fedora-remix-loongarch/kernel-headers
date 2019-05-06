@@ -1,7 +1,7 @@
 # For a stable, released kernel, released_kernel should be 1. For rawhide
 # and/or a kernel built from an rc or git snapshot, released_kernel should
 # be 0.
-%global released_kernel 0
+%global released_kernel 1
 
 # define buildid .local
 
@@ -21,7 +21,7 @@
 # base_sublevel is the kernel version we're starting with and patching
 # on top of -- for example, 3.1-rc7-git1 starts with a 3.0 base,
 # which yields a base_sublevel of 0.
-%define base_sublevel 0
+%define base_sublevel 1
 
 ## If this is a released kernel ##
 %if 0%{?released_kernel}
@@ -40,9 +40,9 @@
 # The next upstream release sublevel (base_sublevel+1)
 %define upstream_sublevel %(echo $((%{base_sublevel} + 1)))
 # The rc snapshot level
-%global rcrev 7
+%global rcrev 0
 # The git snapshot level
-%define gitrev 4
+%define gitrev 0
 # Set rpm version accordingly
 %define rpmversion 5.%{upstream_sublevel}.0
 %endif
@@ -172,6 +172,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Mon May 06 2019 Jeremy Cline <jcline@redhat.com> - 5.1.0-1
+- Linux v5.1.0
+
 * Fri May 03 2019 Jeremy Cline <jcline@redhat.com> - 5.1.0-0.rc7.git4.1
 - Linux v5.1-rc7.git4
 
@@ -378,210 +381,3 @@ done
 
 * Fri Dec 28 2018 Laura Abbott <labbott@redhat.com> - 4.21.0-0.rc0.git2.1
 - Linux v4.21-rc0.git2
-
-* Mon Dec 24 2018 Justin M. Forbes <jforbes@fedoraproject.org> - 4.21.0-1
-- Linux v4.20.0
-
-* Mon Dec 17 2018 Justin M. Forbes <jforbes@fedoraproject.org> - 4.20.0-0.rc7.git0.1
-- Linux v4.20-rc7.git0
-
-* Mon Dec 10 2018 Justin M. Forbes <jforbes@fedoraproject.org> - 4.20.0-0.rc6.git0.1
-- Linux v4.20-rc6.git0
-
-* Mon Dec 03 2018 Justin M. Forbes <jforbes@fedoraproject.org> - 4.20.0-0.rc5.git0.1
-- Linux v4.20-rc5.git0
-
-* Mon Nov 26 2018 Justin M. Forbes <jforbes@fedoraproject.org> - 4.20.0-0.rc4.git0.1
-- Linux v4.20-rc4.git0
-
-* Tue Nov 20 2018 Jeremy Cline <jcline@redhat.com> - 4.20.0-0.rc3.git1.1
-- Linux v4.20-rc3.git1
-
-* Mon Nov 19 2018 Jeremy Cline <jcline@redhat.com> - 4.20.0-0.rc3.git0.1
-- Linux v4.20-rc3.git0
-
-* Sun Nov 11 2018 Justin M. Forbes <jforbes@fedoraproject.org> - 4.20.0-0.rc2.git0.1
-- Linux v4.20-rc2.git0
-
-* Mon Nov 05 2018 Justin M. Forbes <jforbes@fedoraproject.org> - 4.20.0-0.rc1.git0.1
-- Linux v4.20-rc1.git0
-
-* Fri Nov 02 2018 Justin M. Forbes <jforbes@fedoraproject.org> - 4.20.0-0.rc0.git9.1
-- Linux v4.20-rc0.git9
-
-* Thu Nov 01 2018 Justin M. Forbes <jforbes@fedoraproject.org> - 4.20.0-0.rc0.git8.1
-- Linux v4.20-rc0.git8
-
-* Wed Oct 31 2018 Justin M. Forbes <jforbes@fedoraproject.org> - 4.20.0-0.rc0.git7.1
-- Linux v4.20-rc0.git7
-
-* Tue Oct 30 2018 Justin M. Forbes <jforbes@fedoraproject.org> - 4.20.0-0.rc0.git6.1
-- Linux v4.20-rc0.git6
-
-* Mon Oct 29 2018 Justin M. Forbes <jforbes@fedoraproject.org> - 4.20.0-0.rc0.git5.1
-- Linux v4.20-rc0.git5
-
-* Fri Oct 26 2018 Justin M. Forbes <jforbes@fedoraproject.org> - 4.20.0-0.rc0.git4.1
-- Linux v4.20-rc0.git4
-
-* Thu Oct 25 2018 Justin M. Forbes <jforbes@fedoraproject.org> - 4.20.0-0.rc0.git3.1
-- Linux v4.20-rc0.git3
-
-* Wed Oct 24 2018 Justin M. Forbes <jforbes@fedoraproject.org> - 4.20.0-0.rc0.git2.1
-- Linux v4.20-rc0.git2
-
-* Tue Oct 23 2018 Justin M. Forbes <jforbes@fedoraproject.org> - 4.19.0-1
-- Linux v4.20-rc0.git1
-
-* Mon Oct 22 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-1
-- Linux v4.19.0
-
-* Fri Oct 19 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc8.git4.1
-- Linux v4.19-rc8.git4
-
-* Thu Oct 18 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc8.git3.1
-- Linux v4.19-rc8.git3
-
-* Wed Oct 17 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc8.git2.1
-- Linux v4.19-rc8.git2
-
-* Tue Oct 16 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc8.git1.1
-- Linux v4.19-rc8.git1
-
-* Mon Oct 15 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc8.git0.1
-- Linux v4.19-rc8.git0
-
-* Fri Oct 12 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc7.git4.1
-- Linux v4.19-rc7.git4
-
-* Thu Oct 11 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc7.git3.1
-- Linux v4.19-rc7.git3
-
-* Wed Oct 10 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc7.git2.1
-- Linux v4.19-rc7.git2
-
-* Tue Oct 09 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc7.git1.1
-- Linux v4.19-rc7.git1
-
-* Mon Oct 08 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc7.git0.1
-- Linux v4.19-rc7.git0
-
-* Fri Oct 05 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc6.git4.1
-- Linux v4.19-rc6.git4
-
-* Thu Oct 04 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc6.git3.1
-- Linux v4.19-rc6.git3
-
-* Wed Oct 03 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc6.git2.1
-- Linux v4.19-rc6.git2
-
-* Tue Oct 02 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc6.git1.1
-- Linux v4.19-rc6.git1
-
-* Mon Oct 01 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc6.git0.1
-- Linux v4.19-rc6.git0
-
-* Fri Sep 28 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc5.git3.1
-- Linux v4.19-rc5.git3
-
-* Wed Sep 26 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc5.git2.1
-- Linux v4.19-rc5.git2
-
-* Tue Sep 25 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc5.git1.1
-- Linux v4.19-rc5.git1
-
-* Mon Sep 24 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc5.git0.1
-- Linux v4.19-rc5.git0
-
-* Fri Sep 21 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc4.git4.1
-- Linux v4.19-rc4.git4
-
-* Thu Sep 20 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc4.git3.1
-- Linux v4.19-rc4.git3
-
-* Wed Sep 19 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc4.git2.1
-- Linux v4.19-rc4.git2
-
-* Tue Sep 18 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc4.git1.1
-- Linux v4.19-rc4.git1
-
-* Mon Sep 17 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc4.git0.1
-- Linux v4.19-rc4.git0
-
-* Fri Sep 14 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc3.git3.1
-- Linux v4.19-rc3.git3
-
-* Thu Sep 13 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc3.git2.1
-- Linux v4.19-rc3.git2
-
-* Wed Sep 12 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc3.git1.1
-- Linux v4.19-rc3.git1
-
-* Mon Sep 10 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc3.git0.1
-- Linux v4.19-rc3.git0
-
-* Fri Sep 07 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc2.git3.1
-- Linux v4.19-rc2.git3
-
-* Thu Sep 06 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc2.git2.1
-- Linux v4.19-rc2.git2
-
-* Wed Sep 05 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc2.git1.1
-- Linux v4.19-rc2.git1
-
-* Mon Sep 03 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc2.git0.1
-- Linux v4.19-rc2.git0
-
-* Fri Aug 31 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc1.git4.1
-- Linux v4.19-rc1.git4
-
-* Thu Aug 30 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc1.git3.1
-- Linux v4.19-rc1.git3
-
-* Wed Aug 29 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc1.git2.1
-- Linux v4.19-rc1.git2
-
-* Tue Aug 28 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc1.git1.1
-- Linux v4.19-rc1.git1
-
-* Mon Aug 27 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc1.git0.1
-- Linux v4.19-rc1
-
-* Fri Aug 24 2018 Jeremy Cline <jeremy@jcline.org> - 4.19.0-0.rc0.git11.1
-- Linux v4.18-12721-g33e17876ea4e
-
-* Thu Aug 23 2018 Jeremy Cline <jeremy@jcline.org> - 4.19.0-0.rc0.git10.1
-- Linux v4.18-11682-g815f0ddb346c
-
-* Wed Aug 22 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc0.git9.1
-- Linux v4.18-11219-gad1d69735878
-
-* Tue Aug 21 2018 Jeremy Cline <jeremy@jcline.org> - 4.19.0-0.rc0.git8.1
-- Linux v4.18-10986-g778a33959a8a
-
-* Mon Aug 20 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc0.git7.1
-- Linux v4.18-10721-g2ad0d5269970
-
-* Sun Aug 19 2018 Jeremy Cline <jcline@redhat.com> - 4.19.0-0.rc0.git6.1
-- Linux v4.18-10568-g08b5fa819970
-
-* Sat Aug 18 2018 Jeremy Cline <jeremy@jcline.org> - 4.19.0-0.rc0.git5.1
-- Linux v4.18-8895-g1f7a4c73a739
-
-* Fri Aug 17 2018 Jeremy Cline <jeremy@jcline.org> - 4.19.0-0.rc0.git4.1
-- Linux v4.18-8108-g5c60a7389d79
-
-* Mon Aug 13 2018 Justin M. Forbes <jforbes@fedoraproject.org> - 4.18.0-1
-- Linux v4.18
-
-* Tue Jul 31 2018 Justin M. Forbes <jforbes@fedoraproject.org> - 4.18.0-0.rc7.git0.1
-- Linux v4.18-rc7
-
-* Fri Jul 27 2018 Justin M. Forbes <jforbes@fedoraproject.org> - 4.18.0-0.rc6.git3.1
-- Initial package commit
-
-* Mon Jul 23 2018 Justin M. Forbes <jforbes@fedoraproject.org> - 4.18.0-0.rc6.git0.1
-- Changes and updates to fit inline with current Fedora process
-
-* Thu Jul 12 2018 Herton R. Krzesinski <herton@redhat.com> - 4.18.0-0.rc4.2
-- Initial version of splitted kernel-headers package.
