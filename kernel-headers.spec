@@ -1,7 +1,7 @@
 # For a stable, released kernel, released_kernel should be 1. For rawhide
 # and/or a kernel built from an rc or git snapshot, released_kernel should
 # be 0.
-%global released_kernel 1
+%global released_kernel 0
 
 # define buildid .local
 
@@ -172,7 +172,7 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
-* Mon May 20 2019 Justin M. Forbes <jforbes@fedoraproject.org> - 5.1.0-1
+* Mon May 20 2019 Justin M. Forbes <jforbes@fedoraproject.org> - 5.2.0-rc1.git0.1
 - Linux v5.2-rc1.git0
 
 * Mon May 06 2019 Jeremy Cline <jcline@redhat.com> - 5.1.0-1
