@@ -27,7 +27,7 @@
 %if 0%{?released_kernel}
 
 # Do we have a -stable update to apply?
-%define stable_update 18
+%define stable_update 19
 # Set rpm version accordingly
 %if 0%{?stable_update}
 %define stablerev %{stable_update}
@@ -174,6 +174,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Tue May 28 2019 Laura Abbott <labbott@redhat.com> - 5.0.19-200
+- Linux v5.0.19
+
 * Thu May 23 2019 Justin M. Forbes <jforbes@fedoraproject.org> - 5.0.18-200
 - Linux v5.0.18
 
