@@ -174,6 +174,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Mon Jun 24 2019 Jeremy Cline <jcline@redhat.com> - 5.1.14-200
+- Linux v5.1.14
+
 * Wed Jun 19 2019 Jeremy Cline <jcline@redhat.com> - 5.1.12-200
 - Linux v5.1.12
 
