@@ -142,19 +142,15 @@ case $ARCH in
 esac
 
 mkdir -p $RPM_BUILD_ROOT%{_includedir}
-cp -a arch-$ARCH/asm $RPM_BUILD_ROOT%{_includedir}/
 cp -a asm-generic $RPM_BUILD_ROOT%{_includedir}
 
 # Copy all the architectures we care about to their respective asm directories
 for arch in $ARCH_LIST; do
 	mkdir -p $RPM_BUILD_ROOT%{_prefix}/${arch}-linux-gnu/include
-	mv arch-${arch}/asm $RPM_BUILD_ROOT%{_prefix}/${arch}-linux-gnu/include/
 	cp -a asm-generic $RPM_BUILD_ROOT%{_prefix}/${arch}-linux-gnu/include/
 done
 
 # Remove what we copied already
-rm -rf arch-*/asm
-rmdir arch-*
 rm -rf asm-generic
 
 # Copy the rest of the headers over
