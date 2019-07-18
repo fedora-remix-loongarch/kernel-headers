@@ -120,8 +120,6 @@ cross-glibc package.
 # List of architectures we support and want to copy their headers
 ARCH_LIST="arm arm64 powerpc s390 x86"
 
-cd include
-
 ARCH=%_target_cpu
 case $ARCH in
 	armv7hl)
@@ -141,6 +139,7 @@ case $ARCH in
 		;;
 esac
 
+cd arch-$ARCH/include
 mkdir -p $RPM_BUILD_ROOT%{_includedir}
 cp -a asm-generic $RPM_BUILD_ROOT%{_includedir}
 
