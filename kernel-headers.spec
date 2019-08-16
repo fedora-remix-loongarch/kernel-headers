@@ -27,7 +27,7 @@
 %if 0%{?released_kernel}
 
 # Do we have a -stable update to apply?
-%define stable_update 8
+%define stable_update 9
 # Set rpm version accordingly
 %if 0%{?stable_update}
 %define stablerev %{stable_update}
@@ -174,6 +174,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Fri Aug 16 2019 Justin M. Forbes <jforbes@fedoraproject.org> - 5.2.9-100
+- Linux v5.2.9
+
 * Sat Aug 10 2019 Justin M. Forbes <jforbes@redhat.com> - 5.2.8-100
 - Linux v5.2.8
 
