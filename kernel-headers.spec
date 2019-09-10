@@ -27,7 +27,7 @@
 %if 0%{?released_kernel}
 
 # Do we have a -stable update to apply?
-%define stable_update 13
+%define stable_update 14
 # Set rpm version accordingly
 %if 0%{?stable_update}
 %define stablerev %{stable_update}
@@ -172,6 +172,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Tue Sep 10 2019 Justin M. Forbes <jforbes@redhat.com> - 5.2.14-200
+- Linux v5.2.14
+
 * Fri Sep 06 2019 Justin M. Forbes <jforbes@fedoraproject.org> - 5.2.13-200
 - Linux v5.2.13
 
