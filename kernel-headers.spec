@@ -15,7 +15,7 @@
 # For non-released -rc kernels, this will be appended after the rcX and
 # gitX tags, so a 3 here would become part of release "0.rcX.gitX.3"
 #
-%global baserelease 1
+%global baserelease 100
 %global fedora_build %{baserelease}
 
 # base_sublevel is the kernel version we're starting with and patching
@@ -27,7 +27,7 @@
 %if 0%{?released_kernel}
 
 # Do we have a -stable update to apply?
-%define stable_update 0
+%define stable_update 1
 # Set rpm version accordingly
 %if 0%{?stable_update}
 %define stablerev %{stable_update}
@@ -167,6 +167,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Mon Sep 23 2019 Laura Abbott <labbott@redhat.com> - 5.3.1-100
+- Linux v5.3.1
+
 * Mon Sep 16 2019 Laura Abbott <labbott@redhat.com> - 5.3.0-1
 - Linux v5.3.0
 
