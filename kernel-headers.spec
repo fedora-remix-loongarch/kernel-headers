@@ -27,7 +27,7 @@
 %if 0%{?released_kernel}
 
 # Do we have a -stable update to apply?
-%define stable_update 16
+%define stable_update 17
 # Set rpm version accordingly
 %if 0%{?stable_update}
 %define stablerev %{stable_update}
@@ -174,6 +174,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Mon Sep 23 2019 Justin M. Forbes <jforbes@fedoraproject.org> - 5.2.17-100
+- Linux v5.2.17
+
 * Thu Sep 19 2019 Justin M. Forbes <jforbes@fedoraproject.org> - 5.2.16-100
 - Linux v5.2.16
 
