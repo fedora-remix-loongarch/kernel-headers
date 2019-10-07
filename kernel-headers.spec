@@ -27,7 +27,7 @@
 %if 0%{?released_kernel}
 
 # Do we have a -stable update to apply?
-%define stable_update 2
+%define stable_update 4
 # Set rpm version accordingly
 %if 0%{?stable_update}
 %define stablerev %{stable_update}
@@ -167,6 +167,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Mon Oct 07 2019 Peter Robinson <pbrobinson@gmail.com> - 5.3.4-300
+- Linux v5.3.4
+
 * Tue Oct 01 2019 Justin M. Forbes <jforbes@fedoraproject.org> - 5.3.2-300
 - Linux v5.3.2
 
