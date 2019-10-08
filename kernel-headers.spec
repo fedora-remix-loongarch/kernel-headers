@@ -27,7 +27,7 @@
 %if 0%{?released_kernel}
 
 # Do we have a -stable update to apply?
-%define stable_update 18
+%define stable_update 20
 # Set rpm version accordingly
 %if 0%{?stable_update}
 %define stablerev %{stable_update}
@@ -174,6 +174,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Tue Oct 08 2019 Justin M. Forbes <jforbes@fedoraproject.org> - 5.2.20-100
+- Linux v5.2.20
+
 * Tue Oct 01 2019 Justin M. Forbes <jforbes@fedoraproject.org> - 5.2.18-100
 - Linux v5.2.18
 
