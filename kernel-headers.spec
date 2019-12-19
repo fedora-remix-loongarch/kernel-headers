@@ -21,13 +21,13 @@
 # base_sublevel is the kernel version we're starting with and patching
 # on top of -- for example, 3.1-rc7-git1 starts with a 3.0 base,
 # which yields a base_sublevel of 0.
-%define base_sublevel 3
+%define base_sublevel 4
 
 ## If this is a released kernel ##
 %if 0%{?released_kernel}
 
 # Do we have a -stable update to apply?
-%define stable_update 11
+%define stable_update 5
 # Set rpm version accordingly
 %if 0%{?stable_update}
 %define stablerev %{stable_update}
@@ -167,6 +167,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Thu Dec 19 2019 Justin M. Forbes <jforbes@fedoraproject.org> - 5.4.5-300
+- Linux v5.4.5
+
 * Tue Nov 12 2019 Justin M. Forbes <jforbes@fedoraproject.org> - 5.3.11-300
 - Linux v5.3.11
 
