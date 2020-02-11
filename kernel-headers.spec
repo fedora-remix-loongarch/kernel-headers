@@ -27,7 +27,7 @@
 %if 0%{?released_kernel}
 
 # Do we have a -stable update to apply?
-%define stable_update 7
+%define stable_update 18
 # Set rpm version accordingly
 %if 0%{?stable_update}
 %define stablerev %{stable_update}
@@ -167,6 +167,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Tue Feb 11 2020 Jeremy Cline <jcline@redhat.com> - 5.4.18-200
+- Linux v5.4.18
+
 * Wed Jan 01 2020 Justin M. Forbes <jforbes@fedoraproject.org> - 5.4.7-200
 - Linux v5.4.7
 
