@@ -40,7 +40,7 @@
 # The next upstream release sublevel (base_sublevel+1)
 %define upstream_sublevel %(echo $((%{base_sublevel} + 1)))
 # The rc snapshot level
-%global rcrev 4
+%global rcrev 5
 # The git snapshot level
 %define gitrev 0
 # Set rpm version accordingly
@@ -167,6 +167,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Mon Mar 09 2020 Jeremy Cline <jcline@redhat.com> - 5.6.0-0.rc5.git0.1
+- Linux v5.6-rc5.git0
+
 * Mon Mar 02 2020 Jeremy Cline <jcline@redhat.com> - 5.6.0-0.rc4.git0.1
 - Linux v5.6-rc4.git0
 
