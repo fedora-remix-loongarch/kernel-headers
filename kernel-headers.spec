@@ -21,7 +21,7 @@
 # base_sublevel is the kernel version we're starting with and patching
 # on top of -- for example, 3.1-rc7-git1 starts with a 3.0 base,
 # which yields a base_sublevel of 0.
-%define base_sublevel 5
+%define base_sublevel 6
 
 ## If this is a released kernel ##
 %if 0%{?released_kernel}
@@ -167,6 +167,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Mon Mar 30 2020 Jeremy Cline <jcline@redhat.com> - 5.7.0-0.rc7.git0.1
+- Linux v5.6.0
+
 * Mon Mar 23 2020 Jeremy Cline <jcline@redhat.com> - 5.6.0-0.rc7.git0.1
 - Linux v5.6-rc7.git0
 
