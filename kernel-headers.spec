@@ -27,7 +27,7 @@
 %if 0%{?released_kernel}
 
 # Do we have a -stable update to apply?
-%define stable_update 14
+%define stable_update 15
 # Set rpm version accordingly
 %if 0%{?stable_update}
 %define stablerev %{stable_update}
@@ -167,6 +167,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Thu Apr 02 2020 Justin M. Forbes <jforbes@fedoraproject.org> - 5.5.15-100
+- Linux v5.5.15
+
 * Wed Apr 01 2020 Justin M. Forbes <jforbes@fedoraproject.org> - 5.5.14-100
 - Linux v5.5.14
 
