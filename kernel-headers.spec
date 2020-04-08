@@ -27,7 +27,7 @@
 %if 0%{?released_kernel}
 
 # Do we have a -stable update to apply?
-%define stable_update 0
+%define stable_update 3
 # Set rpm version accordingly
 %if 0%{?stable_update}
 %define stablerev %{stable_update}
@@ -167,6 +167,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Wed Apr 08 2020 Jeremy Cline <jcline@redhat.com> - 5.6.3-300
+- Linux v5.6.3
+
 * Mon Mar 30 2020 Jeremy Cline <jcline@redhat.com> - 5.6.0-300
 - Linux v5.6.0
 
