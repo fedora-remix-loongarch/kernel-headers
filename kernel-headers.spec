@@ -40,7 +40,7 @@
 # The next upstream release sublevel (base_sublevel+1)
 %define upstream_sublevel %(echo $((%{base_sublevel} + 1)))
 # The rc snapshot level
-%global rcrev 3
+%global rcrev 4
 # The git snapshot level
 %define gitrev 0
 # Set rpm version accordingly
@@ -167,6 +167,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Wed May 06 2020  Justin M. Forbes <jforbes@fedoraproject.org> - 5.7.0-rc4
+- Linux v5.7-rc4
+
 * Sun Apr 26 2020  Justin M. Forbes <jforbes@fedoraproject.org> - 5.7.0-rc3
 - Linux v5.7-rc3
 
