@@ -118,7 +118,7 @@ cross-glibc package.
 
 %install
 # List of architectures we support and want to copy their headers
-ARCH_LIST="arm arm64 powerpc s390 x86"
+ARCH_LIST="arm arm64 powerpc riscv s390 x86"
 
 ARCH=%_target_cpu
 case $ARCH in
@@ -130,6 +130,9 @@ case $ARCH in
 		;;
 	ppc64*)
 		ARCH=powerpc
+		;;
+	riscv64)
+		ARCH=riscv
 		;;
 	s390x)
 		ARCH=s390
@@ -167,6 +170,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Tue May 26 2020 Justin M. Forbes <jforbes@fedoraproject.org>
+- Add riscv
+
 * Mon May 25 2020 Justin M. Forbes <jforbes@fedoraproject.org> - 5.7.0-0.rc7.git0.1
 - Linux v5.7-rc7.git0
 
