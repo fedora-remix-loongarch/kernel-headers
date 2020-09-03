@@ -27,7 +27,7 @@
 %if 0%{?released_kernel}
 
 # Do we have a -stable update to apply?
-%define stable_update 4
+%define stable_update 6
 # Set rpm version accordingly
 %if 0%{?stable_update}
 %define stablerev %{stable_update}
@@ -170,6 +170,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Thu Sep 03 2020 Justin M. Forbes <jforbes@fedoraproject.org> - 5.8.6-300
+- Linux v5.8.6
+
 * Wed Aug 26 2020 Justin M. Forbes <jforbes@fedoraproject.org> - 5.8.4-300
 - Linux v5.8.4
 
