@@ -27,7 +27,7 @@
 %if 0%{?released_kernel}
 
 # Do we have a -stable update to apply?
-%define stable_update 11
+%define stable_update 18
 # Set rpm version accordingly
 %if 0%{?stable_update}
 %define stablerev %{stable_update}
@@ -170,6 +170,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Mon Nov  2 15:40:32 CST 2020 Justin M. Forbes <jforbes@fedoraproject.org> - 5.8.18-300
+- Linux v5.8.18
+
 * Wed Sep 23 08:24:41 CDT 2020 Justin M. Forbes <jforbes@fedoraproject.org> - 5.8.11-300
 - Linux v5.8.11
 
