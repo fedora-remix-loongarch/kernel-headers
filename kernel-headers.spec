@@ -27,7 +27,7 @@
 %if 0%{?released_kernel}
 
 # Do we have a -stable update to apply?
-%define stable_update 9
+%define stable_update 13
 # Set rpm version accordingly
 %if 0%{?stable_update}
 %define stablerev %{stable_update}
@@ -170,6 +170,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Tue Dec  8 09:58:39 CST 2020 Justin M. Forbes <jforbes@fedoraproject.org> - 5.9.13-100
+- Linux v5.9.13
+
 * Thu Nov 19 14:51:18 CST 2020 Justin M. Forbes <jforbes@fedoraproject.org> - 5.9.9-100
 - Linux v5.9.9
 
