@@ -1,7 +1,7 @@
 # For a stable, released kernel, released_kernel should be 1. For rawhide
 # and/or a kernel built from an rc or git snapshot, released_kernel should
 # be 0.
-%global released_kernel 1
+%global released_kernel 0
 
 # define buildid .local
 
@@ -40,7 +40,7 @@
 # The next upstream release sublevel (base_sublevel+1)
 %define upstream_sublevel %(echo $((%{base_sublevel} + 1)))
 # The rc snapshot level
-%global rcrev 0
+%global rcrev 2
 # The git snapshot level
 %define gitrev 0
 # Set rpm version accordingly
@@ -170,6 +170,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Mon Jan  4 14:50:39 CST 2021 Justin M. Forbes <jforbes@fedoraproject.org> - 5.11.0-0.rc2.git0.1
+- Linux v5.11-rc2.git0
+
 * Mon Dec 14 09:36:14 CST 2020 Justin M. Forbes <jforbes@fedoraproject.org> - 5.10.0-1
 - Linux v5.10
 
