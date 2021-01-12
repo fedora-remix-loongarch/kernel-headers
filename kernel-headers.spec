@@ -27,7 +27,7 @@
 %if 0%{?released_kernel}
 
 # Do we have a -stable update to apply?
-%define stable_update 6
+%define stable_update 7
 # Set rpm version accordingly
 %if 0%{?stable_update}
 %define stablerev %{stable_update}
@@ -170,6 +170,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Tue Jan 12 13:58:56 CST 2021 Justin M. Forbes <jforbes@fedoraproject.org> - 5.10.7-100
+- Linux v5.10.7
+
 * Tue Jan 12 08:14:07 CST 2021 Justin M. Forbes <jforbes@fedoraproject.org> - 5.10.6-100
 - Linux v5.10.6
 
