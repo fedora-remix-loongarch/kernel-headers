@@ -40,7 +40,7 @@
 # The next upstream release sublevel (base_sublevel+1)
 %define upstream_sublevel %(echo $((%{base_sublevel} + 1)))
 # The rc snapshot level
-%global rcrev 1
+%global rcrev 2
 # The git snapshot level
 %define gitrev 0
 # Set rpm version accordingly
@@ -170,6 +170,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Sat Mar 06 2021 Justin M. Forbes <jforbes@fedoraproject.org> - 5.12.0-0.rc2.git0.1
+- Linux v5.12-rc2.git0
+
 * Mon Mar 01 2021 Justin M. Forbes <jforbes@fedoraproject.org> - 5.12.0-0.rc1.git0.1
 - Linux v5.12-rc1.git0
 
