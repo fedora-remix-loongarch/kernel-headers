@@ -15,7 +15,7 @@
 # For non-released -rc kernels, this will be appended after the rcX and
 # gitX tags, so a 3 here would become part of release "0.rcX.gitX.3"
 #
-%global baserelease 1
+%global baserelease 300
 %global fedora_build %{baserelease}
 
 # base_sublevel is the kernel version we're starting with and patching
@@ -27,7 +27,7 @@
 %if 0%{?released_kernel}
 
 # Do we have a -stable update to apply?
-%define stable_update 0
+%define stable_update 7
 # Set rpm version accordingly
 %if 0%{?stable_update}
 %define stablerev %{stable_update}
@@ -86,7 +86,7 @@ Release: %{pkg_release}
 # directory, or git kernel source repository, and do eg.:
 # For a RHEL package: (...)/create_headers_tarball.sh -m RHEL_RELEASE
 # For a Fedora package: kernel/scripts/create_headers_tarball.sh -r <release number>
-Source0: kernel-headers-%{rpmversion}-%{?srcversion}.tar.xz
+Source0: kernel-headers-%{rpmversion}.tar.xz
 Obsoletes: glibc-kernheaders < 3.0-46
 Provides: glibc-kernheaders = 3.0-46
 %if "0%{?variant}"
@@ -170,6 +170,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Wed Mar 17 2021 Justin M. Forbes <jforbes@fedoraproject.org> - 5.11.7-300
+- Linux v5.11.7
+
 * Mon Feb 15 2021 Justin M. Forbes <jforbes@fedoraproject.org> - 5.11.0-1
 - Linux v5.11.0
 
