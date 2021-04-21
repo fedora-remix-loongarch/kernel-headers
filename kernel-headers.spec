@@ -27,7 +27,7 @@
 %if 0%{?released_kernel}
 
 # Do we have a -stable update to apply?
-%define stable_update 14
+%define stable_update 16
 # Set rpm version accordingly
 %if 0%{?stable_update}
 %define stablerev %{stable_update}
@@ -170,6 +170,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Wed Apr 21 2021 Justin M. Forbes <jforbes@fedoraproject.org> - 5.11.16-100
+- Linux v5.11.16
+
 * Wed Apr 14 2021 Justin M. Forbes <jforbes@fedoraproject.org> - 5.11.14-100
 - Linux v5.11.14
 
