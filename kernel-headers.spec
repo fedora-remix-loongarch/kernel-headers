@@ -40,7 +40,7 @@
 # The next upstream release sublevel (base_sublevel+1)
 %define upstream_sublevel %(echo $((%{base_sublevel} + 1)))
 # The rc snapshot level
-%global rcrev 3
+%global rcrev 4
 # The git snapshot level
 %define gitrev 0
 # Set rpm version accordingly
@@ -170,6 +170,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Mon Aug 02 2021 Justin M. Forbes <jforbes@fedoraproject.org> - 5.14.0-0.rc4.git0.1
+- Linux v5.14-rc4.git0
+
 * Mon Jul 26 2021 Justin M. Forbes <jforbes@fedoraproject.org> - 5.14.0-0.rc3.git0.1
 - Linux v5.14-rc3.git0
 
