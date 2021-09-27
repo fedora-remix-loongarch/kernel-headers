@@ -27,7 +27,7 @@
 %if 0%{?released_kernel}
 
 # Do we have a -stable update to apply?
-%define stable_update 7
+%define stable_update 8
 # Set rpm version accordingly
 %if 0%{?stable_update}
 %define stablerev %{stable_update}
@@ -170,6 +170,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Mon Sep 27 2021 Justin M. Forbes <jforbes@fedoraproject.org> - 5.14.8-300
+- Linux v5.14.8
+
 * Wed Sep 22 2021 Justin M. Forbes <jforbes@fedoraproject.org> - 5.14.7-300
 - Linux v5.14.7
 
