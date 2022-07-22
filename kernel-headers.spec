@@ -27,7 +27,7 @@
 %if 0%{?released_kernel}
 
 # Do we have a -stable update to apply?
-%define stable_update 4
+%define stable_update 13
 # Set rpm version accordingly
 %if 0%{?stable_update}
 %define stablerev %{stable_update}
@@ -170,6 +170,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Fri Jul 22 2022 Justin M. Forbes <jforbes@fedoraproject.org> - 5.18.13-200
+- Linux v5.18.13
+
 * Tue Jun 14 2022 Justin M. Forbes <jforbes@fedoraproject.org> - 5.18.4-200
 - Linux v5.18.4
 
