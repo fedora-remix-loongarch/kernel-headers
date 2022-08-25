@@ -86,7 +86,7 @@ Release: %{pkg_release}
 # directory, or git kernel source repository, and do eg.:
 # For a RHEL package: (...)/create_headers_tarball.sh -m RHEL_RELEASE
 # For a Fedora package: kernel/scripts/create_headers_tarball.sh -r <release number>
-Source0: kernel-headers-%{rpmversion}-%{?srcversion}.tar.xz
+Source0: kernel-headers-%{rpmversion}.tar.xz
 Obsoletes: glibc-kernheaders < 3.0-46
 Provides: glibc-kernheaders = 3.0-46
 %if "0%{?variant}"
