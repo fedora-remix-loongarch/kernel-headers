@@ -21,19 +21,19 @@
 # base_sublevel is the kernel version we're starting with and patching
 # on top of -- for example, 3.1-rc7-git1 starts with a 3.0 base,
 # which yields a base_sublevel of 0.
-%define base_sublevel 19
+%define base_sublevel 0
 
 ## If this is a released kernel ##
 %if 0%{?released_kernel}
 
 # Do we have a -stable update to apply?
-%define stable_update 4
+%define stable_update 5
 # Set rpm version accordingly
 %if 0%{?stable_update}
 %define stablerev %{stable_update}
 %define stable_base %{stable_update}
 %endif
-%define rpmversion 5.%{base_sublevel}.%{stable_update}
+%define rpmversion 6.%{base_sublevel}.%{stable_update}
 
 ## The not-released-kernel case ##
 %else
@@ -44,7 +44,7 @@
 # The git snapshot level
 %define gitrev 0
 # Set rpm version accordingly
-%define rpmversion 5.%{upstream_sublevel}.0
+%define rpmversion 6.%{upstream_sublevel}.0
 %endif
 
 # pkg_release is what we'll fill in for the rpm Release: field
@@ -170,6 +170,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Wed Oct 26 2022 Justin M. Forbes <jforbes@fedoraproject.org> - 6.0.5-100
+- Linux v6.0.5
+
 * Thu Aug 25 2022 Justin M. Forbes <jforbes@fedoraproject.org> - 5.19.4-100
 - Linux v5.19.4
 
