@@ -21,7 +21,7 @@
 # base_sublevel is the kernel version we're starting with and patching
 # on top of -- for example, 3.1-rc7-git1 starts with a 3.0 base,
 # which yields a base_sublevel of 0.
-%define base_sublevel 4
+%define base_sublevel 5
 
 ## If this is a released kernel ##
 %if 0%{?released_kernel}
@@ -170,6 +170,9 @@ done
 %{_prefix}/*-linux-gnu/*
 
 %changelog
+* Tue Sep 19 2023 Justin M. Forbes <jforbes@fedoraproject.org> - 6.5.4-100
+- Linux v6.5.4
+
 * Wed Jul 19 2023 Justin M. Forbes <jforbes@fedoraproject.org> - 6.4.4-100
 - Linux v6.4.4
 
