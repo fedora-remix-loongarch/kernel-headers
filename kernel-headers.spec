@@ -33,7 +33,7 @@
 %define stablerev %{stable_update}
 %define stable_base %{stable_update}
 %endif
-%define rpmversion 6.%{base_sublevel}.%{stable_update}
+%define pkgversion 6.%{base_sublevel}.%{stable_update}
 
 ## The not-released-kernel case ##
 %else
@@ -44,7 +44,7 @@
 # The git snapshot level
 %define gitrev 0
 # Set rpm version accordingly
-%define rpmversion 6.%{upstream_sublevel}.0
+%define pkgversion 6.%{upstream_sublevel}.0
 %endif
 
 # pkg_release is what we'll fill in for the rpm Release: field
@@ -78,7 +78,7 @@ Name: kernel-headers
 Summary: Header files for the Linux kernel for use by glibc
 License: ((GPL-2.0-only WITH Linux-syscall-note) OR BSD-2-Clause) AND ((GPL-2.0-only WITH Linux-syscall-note) OR BSD-3-Clause) AND ((GPL-2.0-only WITH Linux-syscall-note) OR CDDL-1.0) AND ((GPL-2.0-only WITH Linux-syscall-note) OR Linux-OpenIB) AND ((GPL-2.0-only WITH Linux-syscall-note) OR MIT) AND ((GPL-2.0-or-later WITH Linux-syscall-note) OR BSD-3-Clause) AND ((GPL-2.0-or-later WITH Linux-syscall-note) OR MIT) AND BSD-3-Clause AND (GPL-1.0-or-later WITH Linux-syscall-note) AND GPL-2.0-only AND (GPL-2.0-only WITH Linux-syscall-note) AND (GPL-2.0-or-later WITH Linux-syscall-note) AND (LGPL-2.0-or-later WITH Linux-syscall-note) AND (LGPL-2.1-only WITH Linux-syscall-note) AND (LGPL-2.1-or-later WITH Linux-syscall-note) AND MIT
 URL: http://www.kernel.org/
-Version: %{rpmversion}
+Version: %{pkgversion}
 Release: %{pkg_release}
 # This is a tarball with headers from the kernel, which should be created
 # using create_headers_tarball.sh provided in the kernel source package.
@@ -86,7 +86,7 @@ Release: %{pkg_release}
 # directory, or git kernel source repository, and do eg.:
 # For a RHEL package: (...)/create_headers_tarball.sh -m RHEL_RELEASE
 # For a Fedora package: kernel/scripts/create_headers_tarball.sh -r <release number>
-Source0: kernel-headers-%{rpmversion}.tar.xz
+Source0: kernel-headers-%{pkgversion}.tar.xz
 Obsoletes: glibc-kernheaders < 3.0-46
 Provides: glibc-kernheaders = 3.0-46
 %if "0%{?variant}"
