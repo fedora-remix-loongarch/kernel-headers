@@ -4,8 +4,8 @@
 %global released_kernel 1
 
 # define buildid .local
-%define specversion 6.7.3
-%define tarfile_release 6.7.3
+%define specversion 6.8.3
+%define tarfile_release 6.8.3
 # This is needed to do merge window version magic
 # This allows pkg_release to have configurable %%{?dist} tag
 %define specrelease 100%{?buildid}%{?dist}
