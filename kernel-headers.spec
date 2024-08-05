@@ -5,10 +5,10 @@
 
 # define buildid .local
 %define specversion 6.11.0
-%define tarfile_release 6.11-rc1-4-gdc1c8034e31b
+%define tarfile_release 6.11-rc2
 # This is needed to do merge window version magic
 # This allows pkg_release to have configurable %%{?dist} tag
-%define specrelease 0.rc1.dc1c8034e31b.16%{?buildid}%{?dist}
+%define specrelease 0.rc2.23%{?buildid}%{?dist}
 
 # This package doesn't contain any binary, thus no debuginfo package is needed
 %global debug_package %{nil}
