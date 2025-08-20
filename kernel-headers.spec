@@ -3,7 +3,7 @@
 # be 0.
 %global released_kernel 1
 
-%define buildid .test
+# define buildid .local
 %define specversion 6.16.2
 %define tarfile_release 6.16.2
 # This is needed to do merge window version magic
